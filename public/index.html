@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#020617" />
+<title>Cable Session</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="app" class="wrap">
+  <div class="header">
+    <h1>Cable Session</h1>
+    <p id="subtitle" class="subtitle">Loading…</p>
+  </div>
+
+  <div class="segmented" id="modeToggle">
+    <button data-mode="train" class="seg-btn active">Workout</button>
+    <button data-mode="progress" class="seg-btn">Progress</button>
+  </div>
+
+  <div id="trainView">
+    <div class="segmented" id="dayToggle">
+      <button data-day="A" class="seg-btn active">Workout A</button>
+      <button data-day="B" class="seg-btn">Workout B</button>
+    </div>
+    <div id="groups"></div>
+
+    <button id="logBtn" class="log-btn">Log session</button>
+    <p id="saveNote" class="save-note"></p>
+    <button id="resetBtn" class="reset-btn">↺ Reset set tracking</button>
+    <p class="footnote">Weights save automatically · stop 2–3 reps short of failure</p>
+  </div>
+
+  <div id="progressView" class="hidden"></div>
+</div>
+
+<div class="rest-bar">
+  <div class="rest-inner">
+    <span class="rest-label">Rest</span>
+    <div id="restControls" class="rest-controls"></div>
+  </div>
+</div>
+
+<script src="program.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

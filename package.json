@@ -1,0 +1,16 @@
+{
+  "name": "cable-tracker-app",
+  "version": "1.0.0",
+  "description": "Cable machine workout tracker — Express + Postgres backend, mobile-friendly frontend",
+  "main": "server.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "googleapis": "^140.0.1"
+  }
+}
