@@ -163,8 +163,8 @@ function renderExerciseCard(ex) {
     input.value = n;
     scheduleWeightSave();
   };
-  card.querySelector(".minus").addEventListener("click", () => setW(weight - STEP));
-  card.querySelector(".plus").addEventListener("click", () => setW(weight + STEP));
+  card.querySelector(".minus").addEventListener("click", () => setW((state.weights[ex.id] ?? ex.defWeight) - STEP));
+  card.querySelector(".plus").addEventListener("click", () => setW((state.weights[ex.id] ?? ex.defWeight) + STEP));
   input.addEventListener("change", () => {
     const n = parseInt(input.value.replace(/[^0-9]/g, ""), 10);
     setW(isNaN(n) ? 0 : n);
