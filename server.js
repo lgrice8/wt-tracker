@@ -94,11 +94,11 @@ app.delete("/api/sessions/:id", async (req, res) => {
   }
 });
 
-// Confirms the service account can actually reach the shared folder —
-// hit this after deploying to verify the setup worked.
+// Confirms the service account can actually reach and read the data file —
+// hit this after deploying (or after fixing a config issue) to verify.
 app.get("/api/health", async (req, res) => {
   try {
-    const fileId = await getStore().findOrCreateFile();
+    const fileId = await getStore().findFile();
     res.json({ ok: true, drive: "connected", fileId });
   } catch (err) {
     res.status(500).json({ ok: false, drive: "disconnected", error: err.message });
